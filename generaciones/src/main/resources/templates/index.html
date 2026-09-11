@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html
+    lang="es"
+    xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        Generaciones Humanas
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="contenedor">
+
+
+    <h1>
+        Generaciones Humanas
+    </h1>
+
+
+    <p>
+        Complete el formulario para
+        determinar a qué generación pertenece.
+    </p>
+
+
+    <form
+        action="/procesar"
+        method="post">
+
+
+        <label>
+            Nombre
+        </label>
+
+        <input
+            type="text"
+            name="nombre"
+            required>
+
+
+        <label>
+            Apellido
+        </label>
+
+        <input
+            type="text"
+            name="apellido"
+            required>
+			
+		<label>
+			Correo
+		</label>
+
+		<input
+		    type="text"
+		    name="correo"
+		    required>
+
+
+        <label>
+            Fecha de nacimiento
+        </label>
+
+        <input
+            type="date"
+            name="fechaNacimiento"
+            required>
+
+
+        <label>
+            Tipo de persona
+        </label>
+
+        <select
+            name="tipo"
+            id="tipo">
+
+            <option value="estudiante">
+                Estudiante
+            </option>
+
+            <option value="empleado">
+                Empleado
+            </option>
+			
+			<option value="docente">
+				Docente
+			</option>
+
+        </select>
+		
+		<label>
+		   Sexo
+		</label>
+
+		<select
+		     name="sexo"
+		    id="sexo">
+
+		    <option>
+		        Masculino
+		    </option>
+
+		    <option>
+		        Femenino
+		    </option>
+
+			<option>
+				N/A
+			</option>
+
+		</select>
+
+
+        <label>
+            Carrera / Departamento
+        </label>
+
+        <input
+            type="text"
+            name="ocupacion"
+            required>
+
+			
+			<label>
+			    Facultad
+			</label>
+
+			<input
+			    type="text"
+			    name="facultad"
+			    required>
+
+        <button type="submit">
+
+            Determinar generación
+
+        </button>
+
+
+    </form>
+
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html
+    lang="es"
+    xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        Resultado
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="contenedor resultado">
+
+
+    <h1>
+        Resultado
+    </h1>
+
+
+    <h2
+        th:text="${persona.nombreCompleto}">
+    </h2>
+
+
+    <div class="dato">
+
+        <strong>
+            Fecha de nacimiento:
+        </strong>
+
+        <span
+            th:text="${persona.fechaNacimiento}">
+        </span>
+
+    </div>
+
+
+    <div class="dato">
+
+        <strong>
+            Edad:
+        </strong>
+
+        <span
+            th:text="${edad + ' años'}">
+        </span>
+
+    </div>
+	
+	<div class ="dato">
+		<strong>
+			Correo:
+		</strong>
+
+		<span
+		    th:text="${correo}">	
+		</span>
+		
+	</div>
+
+	<div class ="dato">
+		<strong>
+			Sexo:
+		</strong>
+
+		<span
+		    th:text="${sexo}">	
+		</span>
+		
+	</div>
+	
+	<div class ="dato">
+		<strong>
+			Facultad:
+		</strong>
+
+		<span
+		    th:text="${facultad}">	
+		</span>
+		
+	</div>
+
+
+    <div class="dato">
+
+        <strong>
+            Tipo:
+        </strong>
+
+        <span
+            th:text="${persona.tipoPersona}">
+        </span>
+		
+
+    </div>
+
+
+    <div class="dato">
+
+        <strong>
+            Carrera / Departamento:
+        </strong>
+
+        <span
+            th:text="${ocupacion}">
+        </span>
+
+    </div>
+
+
+    <div class="generacion">
+
+        <p>
+            Pertenece a:
+        </p>
+
+        <h2
+            th:text="${generacion}">
+        </h2>
+		
+		<p
+			th:text="${descGeneracion}">
+		</p>
+		
+		<img th:src="${imgGeneracion}" alt="" width = "500px"/>
+		
+
+    </div>
+
+
+    <a
+        href="/"
+        class="boton">
+
+        Nuevo registro
+
+    </a>
+
+
+</div>
+
+
+</body>
+
+</html>
